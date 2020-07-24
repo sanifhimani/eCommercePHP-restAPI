@@ -1,0 +1,2974 @@
+{
+	"info": {
+		"_postman_id": "83ff714a-79d3-4767-84fd-d3f7001dbf61",
+		"name": "eCommercePHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"item": [
+				{
+					"name": "registerUser - email in use error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmathers@gmail.com\",\n    \"password\": \"marshall890\",\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"Mathers\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser - password length error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmatherss@gmail.com\",\n    \"password\": \"mars\",\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"Mathers\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmathers@gmail.com\",\n    \"password\": \"marshall123\",\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"Mathers\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"\",\n    \"password\": \"\",\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"Mathers\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser - invalid email address error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmathers\",\n    \"password\": \"marshall123\",\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"Mathers\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser - currently logged in situation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"email@gmail.com\",\n    \"password\": \"password123\",\n    \"first_name\": \"New\",\n    \"last_name\": \"Email\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login user",
+			"item": [
+				{
+					"name": "loginUser - email not registered error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmatherss@gmail.com\",\n    \"password\": \"marshall123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/loginUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"loginUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmathers@gmail.com\",\n    \"password\": \"marshall123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/loginUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"loginUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmathers@gmail.com\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/loginUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"loginUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser - invalid email address error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmathers\",\n    \"password\": \"marshall123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/loginUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"loginUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser - already logged in situation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_address\": \"mmathers@gmail.com\",\n    \"password\": \"marshall123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/loginUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"loginUser.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get user details",
+			"item": [
+				{
+					"name": "getUserDetails - successful",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/getUserDetails.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"getUserDetails.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserDetails - not logged in",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/getUserDetails.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"getUserDetails.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Update user details",
+			"item": [
+				{
+					"name": "updateUserDetails - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"M\"\n}"
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateUserDetails.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateUserDetails.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserDetails - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateUserDetails.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateUserDetails.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserDetails - not logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Marshall\",\n    \"last_name\": \"M\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateUserDetails.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateUserDetails.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Add address",
+			"item": [
+				{
+					"name": "addAddress - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/addAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"addAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAddress - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/addAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"addAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAddress - invalid street number format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flat_number\": \"A\",\n    \"street_number\": \"1234\",\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/addAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"addAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAddress - invalid postal code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Transfer-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2L10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/addAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"addAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAddress - address already exists situation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/addAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"addAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAddress - not logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/addAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"addAddress.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Update address",
+			"item": [
+				{
+					"name": "updateAddress - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": 8,\n    \"flat_number\": \"12\",\n    \"street_number\": 39,\n    \"street_name\": \"Ezra Avenue\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L3A9\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress - invalid street number format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": 8,\n    \"flat_number\": \"A\",\n    \"street_number\": \"365\",\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": 8,\n    \"flat_number\": \"\",\n    \"street_number\": 365,\n    \"street_name\": \"\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress - invalid postal code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": 8,\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2489\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress - invalid mapping id format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": \"8\",\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress - address already saved",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": 8,\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress - unauthorized access to mapping id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": 1,\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAddress - not logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mapping_id\": 8,\n    \"flat_number\": \"A\",\n    \"street_number\": 365,\n    \"street_name\": \"Holly Street\",\n    \"city\": \"Waterloo\",\n    \"province\": \"Ontario\",\n    \"postal_code\": \"N2L4G2\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updateAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updateAddress.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delete address",
+			"item": [
+				{
+					"name": "deleteAddress - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address_id\": 1\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/deleteAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"deleteAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAddress - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address_id\": \n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/deleteAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"deleteAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAddress - invalid address id format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address_id\": \"1\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/deleteAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"deleteAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAddress - no address found",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address_id\": 3\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/deleteAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"deleteAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAddress - not logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address_id\": 1\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/deleteAddress.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"deleteAddress.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Update password",
+			"item": [
+				{
+					"name": "updatePassword - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"marshall123\",\n    \"new_password\": \"mathers123\",\n    \"confirm_password\": \"mathers123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updatePassword.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updatePassword.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"\",\n    \"new_password\": \"mathers123\",\n    \"confirm_password\": \"mathers123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updatePassword.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updatePassword.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword - incorrect old password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"mathers123\",\n    \"new_password\": \"newpassword\",\n    \"confirm_password\": \"newpassword\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updatePassword.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updatePassword.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword - passwords mismatch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"marshall123\",\n    \"new_password\": \"mathers1234\",\n    \"confirm_password\": \"mathers123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updatePassword.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updatePassword.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword - not logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"marshall123\",\n    \"new_password\": \"mathers123\",\n    \"confirm_password\": \"mathers123\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/updatePassword.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"updatePassword.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delete user",
+			"item": [
+				{
+					"name": "deleteUser - successful",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/deleteUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"deleteUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser - not logged in",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/deleteUser.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"deleteUser.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Logout user",
+			"item": [
+				{
+					"name": "logoutUser - successful",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/logout.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"logout.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logoutUser - no active sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/user/logout.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"user",
+								"logout.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get categories",
+			"item": [
+				{
+					"name": "getCategories - success",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/category/getCategory.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"category",
+								"getCategory.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get all products",
+			"item": [
+				{
+					"name": "getAllProducts - successful",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/product/getAllProducts.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"product",
+								"getAllProducts.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get single product",
+			"item": [
+				{
+					"name": "getSingleProduct - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/product/getSingleProduct.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"product",
+								"getSingleProduct.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleProduct - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/product/getSingleProduct.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"product",
+								"getSingleProduct.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleProduct - invalid product id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/product/getSingleProduct.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"product",
+								"getSingleProduct.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get reviews",
+			"item": [
+				{
+					"name": "getReviews - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/getReviews.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"getReviews.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReviews - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/getReviews.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"getReviews.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReviews - invalid product id format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"1\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/getReviews.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"getReviews.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Add reviews",
+			"item": [
+				{
+					"name": "addReview - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"rating\": 3,\n    \"image\": \"comment-shirt.jpg\",\n    \"comment\": \"Good product\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/addReview.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"addReview.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReview - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": ,\n    \"rating\": 5,\n    \"comment\": \"Good product\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/addReview.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"addReview.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReview - invalid product id format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"1\",\n    \"rating\": 5,\n    \"comment\": \"Good product\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/addReview.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"addReview.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReview - invalid rating format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"rating\": \"5\",\n    \"comment\": \"Good product\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/addReview.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"addReview.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReview - invalid rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"rating\": 0,\n    \"comment\": \"Good product\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/addReview.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"addReview.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReview - not logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"rating\": 5,\n    \"comment\": \"Good product\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/review/addReview.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"review",
+								"addReview.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Add to cart",
+			"item": [
+				{
+					"name": "addToCart - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/addProductToCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"addProductToCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToCart - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": ,\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/addProductToCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"addProductToCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToCart - invalid product id format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"10\",\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/addProductToCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"addProductToCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToCart - invalid quantity format",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 10,\n    \"quantity\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/addProductToCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"addProductToCart.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get cart",
+			"item": [
+				{
+					"name": "getCart - successful",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/getUserCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"getUserCart.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Remove from cart",
+			"item": [
+				{
+					"name": "removeCartItem - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 19\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/removeCartItem.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"removeCartItem.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCartItem - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/removeCartItem.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"removeCartItem.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCartItem - invalid id format",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/removeCartItem.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"removeCartItem.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Update cart",
+			"item": [
+				{
+					"name": "updateCart - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"quantity\": 8\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/updateCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"updateCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCart - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": ,\n    \"quantity\": 8\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/updateCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"updateCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCart - invalid product id format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"1\",\n    \"quantity\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/updateCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"updateCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCart - invalid quantity format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"quantity\": \"8\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/updateCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"updateCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCart - quantity less that 0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"quantity\": -1\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/updateCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"updateCart.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCart - quantity more that available quantity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 1,\n    \"quantity\": 20\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/cart/updateCart.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"cart",
+								"updateCart.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Checkout",
+			"item": [
+				{
+					"name": "checkout - successful",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/checkout/checkout.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"checkout",
+								"checkout.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkout - empty cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/checkout/checkout.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"checkout",
+								"checkout.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkout - no user address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/checkout/checkout.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"checkout",
+								"checkout.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkout - not logged in",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/checkout/checkout.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"checkout",
+								"checkout.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "View purchase history",
+			"item": [
+				{
+					"name": "viewPurchaseHistory - successful",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/order/viewPurchaseHistory.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"order",
+								"viewPurchaseHistory.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewPurchaseHistory - not logged in",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/order/viewPurchaseHistory.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"order",
+								"viewPurchaseHistory.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "View particular purchase history",
+			"item": [
+				{
+					"name": "viewParticularPurchaseHistory - successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 13\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/order/viewParticularPurchaseHistory.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"order",
+								"viewParticularPurchaseHistory.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewParticularPurchaseHistory - empty fields error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/order/viewParticularPurchaseHistory.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"order",
+								"viewParticularPurchaseHistory.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewParticularPurchaseHistory - invalid id format",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/order/viewParticularPurchaseHistory.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"order",
+								"viewParticularPurchaseHistory.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewParticularPurchaseHistory - not logged in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.64.2/eCommercePHP/api/order/viewParticularPurchaseHistory.php",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"64",
+								"2"
+							],
+							"path": [
+								"eCommercePHP",
+								"api",
+								"order",
+								"viewParticularPurchaseHistory.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
